@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Bandeiras do Brasil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-image: url('Bandeira_Nacional.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+        img {
+            width: 500px;
+            height: auto;
+            margin-top: 20px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 30px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 48px;
+            font-weight: bold;
+            color: blue;
+        }
+        #score {
+            font-size: 50px;
+            margin-top: 20px;
+            color: white;
+        }
+        #restartButton {
+            display: none; /* Esconde o botão inicialmente */
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo de Bandeiras do Brasil</h1>
+    <div id="game">
+        <img id="flag" src="" alt="Bandeira do Estado">
+        <br>
+        <button id="option1" onclick="checkAnswer('option1')">Opção 1</button>
+        <button id="option2" onclick="checkAnswer('option2')">Opção 2</button>
+        <button id="option3" onclick="checkAnswer('option3')">Opção 3</button>
+        <button id="option4" onclick="checkAnswer('option4')">Opção 4</button>
+        <div id="result"></div>
+        <div id="score">Pontuação: 0</div>
+        <button id="restartButton" onclick="restartGame()">Reiniciar Jogo</button> <!-- Botão de reinicialização -->
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
